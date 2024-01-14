@@ -4,6 +4,7 @@ import com.dreamnestmonitor.dreamnestserver.exception.EnvironmentDataNotFoundExc
 import com.dreamnestmonitor.dreamnestserver.model.EnvironmentData;
 import com.dreamnestmonitor.dreamnestserver.repository.EnvironmentDataRepository;
 import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,6 +51,6 @@ public class EnvironmentDataController {
         if (maybeEnvironmentDataFromDateTimeRange.isPresent()) {
             return maybeEnvironmentDataFromDateTimeRange.get();
         }
-        throw new EnvironmentDataNotFoundException();
+        return ImmutableList.of();
     }
 }

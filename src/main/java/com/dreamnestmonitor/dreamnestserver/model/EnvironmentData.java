@@ -34,60 +34,41 @@ public class EnvironmentData {
 
     protected EnvironmentData() {}
 
-    public EnvironmentData(LocalDateTime envDateTime, LocalDate envDate, LocalTime envTime, Float temp, Float brightness, Float noise) {
+    public EnvironmentData(LocalDateTime envDateTime, LocalDate envDate, LocalTime envTime, Float temp,
+                           Float brightness, Float noise) {
         this.envDateTime = envDateTime;
         this.envDate = envDate;
         this.envTime = envTime;
         this.temp = temp;
         this.brightness = brightness;
         this.noise = noise;
+    }
+
+    public Long getEnvironmentDataID() {
+        return environmentDataID;
     }
 
     public LocalDateTime getEnvDateTime() {
         return envDateTime;
     }
 
-    public void setEnvDateTime(LocalDateTime envDateTime) {
-        this.envDateTime = envDateTime;
-    }
-
     public LocalDate getEnvDate() {
         return envDate;
-    }
-
-    public void setEnvDate(LocalDate envDate) {
-        this.envDate = envDate;
     }
 
     public LocalTime getEnvTime() {
         return envTime;
     }
 
-    public void setEnvTime(LocalTime envTime) {
-        this.envTime = envTime;
-    }
-
     public Float getTemp() {
         return temp;
-    }
-
-    public void setTemp(Float temp) {
-        this.temp = temp;
     }
 
     public Float getBrightness() {
         return brightness;
     }
 
-    public void setBrightness(Float brightness) {
-        this.brightness = brightness;
-    }
-
     public Float getNoise() {
         return noise;
-    }
-
-    public void setNoise(Float noise) {
-        this.noise = noise;
     }
 }

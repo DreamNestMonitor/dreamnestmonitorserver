@@ -8,6 +8,7 @@ import java.time.LocalTime;
 
 @Entity
 public class SleepDate {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sleepDateID")
@@ -43,51 +44,31 @@ public class SleepDate {
         this.sleepTimeTo = sleepTimeTo;
     }
 
-    public LocalDateTime getSleepDateTimeFrom() {
-        return sleepDateTimeFrom;
+    public Long getSleepDateID() {
+        return sleepDateID;
     }
 
-    public void setSleepDateTimeFrom(LocalDateTime sleepDateTimeFrom) {
-        this.sleepDateTimeFrom = sleepDateTimeFrom;
+    public LocalDateTime getSleepDateTimeFrom() {
+        return sleepDateTimeFrom;
     }
 
     public LocalDate getSleepDateFrom() {
         return sleepDateFrom;
     }
 
-    public void setSleepDateFrom(LocalDate sleepDateFrom) {
-        this.sleepDateFrom = sleepDateFrom;
-    }
-
     public LocalTime getSleepTimeFrom() {
         return sleepTimeFrom;
-    }
-
-    public void setSleepTimeFrom(LocalTime sleepTimeFrom) {
-        this.sleepTimeFrom = sleepTimeFrom;
     }
 
     public LocalDateTime getSleepDateTimeTo() {
         return sleepDateTimeTo;
     }
 
-    public void setSleepDateTimeTo(LocalDateTime sleepDateTimeTo) {
-        this.sleepDateTimeTo = sleepDateTimeTo;
-    }
-
     public LocalDate getSleepDateTo() {
         return sleepDateTo;
     }
 
-    public void setSleepDateTo(LocalDate sleepDateTo) {
-        this.sleepDateTo = sleepDateTo;
-    }
-
     public LocalTime getSleepTimeTo() {
         return sleepTimeTo;
-    }
-
-    public void setSleepTimeTo(LocalTime sleepTimeTo) {
-        this.sleepTimeTo = sleepTimeTo;
     }
 }
