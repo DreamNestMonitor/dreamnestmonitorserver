@@ -12,7 +12,7 @@ public class HeartRateData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "rateID")
-    private Long rateID;
+    private Integer rateID;
 
     @Column(name = "rateDateTime")
     private LocalDateTime rateDateTime;
@@ -33,6 +33,10 @@ public class HeartRateData {
         this.rateDate = rateDate;
         this.rateTime = rateTime;
         this.rate = rate;
+    }
+
+    public Integer getRateID() {
+        return rateID;
     }
 
     public LocalDateTime getRateDateTime() {

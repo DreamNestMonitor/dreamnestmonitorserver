@@ -12,7 +12,7 @@ public class EnvironmentData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "environmentDataID")
-    private Long environmentDataID;
+    private Integer environmentDataID;
 
     @Column(name = "envDateTime")
     private LocalDateTime envDateTime;
@@ -44,7 +44,7 @@ public class EnvironmentData {
         this.noise = noise;
     }
 
-    public Long getEnvironmentDataID() {
+    public Integer getEnvironmentDataID() {
         return environmentDataID;
     }
 

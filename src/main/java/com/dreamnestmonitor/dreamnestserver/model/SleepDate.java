@@ -12,7 +12,7 @@ public class SleepDate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sleepDateID")
-    private Long sleepDateID;
+    private Integer sleepDateID;
 
     @Column(name = "sleepDateTimeFrom")
     private LocalDateTime sleepDateTimeFrom;
@@ -44,7 +44,7 @@ public class SleepDate {
         this.sleepTimeTo = sleepTimeTo;
     }
 
-    public Long getSleepDateID() {
+    public Integer getSleepDateID() {
         return sleepDateID;
     }
 
