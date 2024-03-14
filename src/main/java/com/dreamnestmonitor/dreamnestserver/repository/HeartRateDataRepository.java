@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface HeartRateDataRepository extends JpaRepository<HeartRateData, Long> {
     @Query(
-            value = "SELECT * FROM HeartRate WHERE rateDateTime BETWEEN ?1 AND ?2",
+            value = "SELECT * FROM HeartRateData WHERE rateDateTime BETWEEN ?1 AND ?2",
             nativeQuery = true)
     Optional<List<HeartRateData>> findHeartBeatUsingDateTimeRangeQuery(LocalDateTime from, LocalDateTime t);
 }
