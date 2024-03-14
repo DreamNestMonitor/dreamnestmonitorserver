@@ -8,6 +8,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -19,6 +20,25 @@ public class SleepDataController {
 
     SleepDataController (SleepDataRepository repository) {
         this.repository = repository;
+    }
+
+    @PostMapping("/sleepdata")
+    SleepData newSleepData(@RequestBody SleepData newSleepData) {
+        return repository.save(newSleepData);
+    }
+
+    @PostMapping("/sleepdata/batch")
+    List<SleepData> newSleepDatabatch(@RequestBody SleepData[] newSleepDataBatch) {
+        List<SleepData> saved = new ArrayList<>();
+        for (SleepData newSleepData : newSleepDataBatch) {
+            saved.add(repository.save(newSleepData));
+        }
+        return saved;
+    }
+
+    @GetMapping("/sleepdata")
+    List<SleepData> getAll() {
+        return repository.findAll();
     }
 
     @GetMapping("/sleepdata/range")
