@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://faded-sun-production.up.railway.app")
 public class SleepDateController {
 
     private final SleepDateRepository repository;
