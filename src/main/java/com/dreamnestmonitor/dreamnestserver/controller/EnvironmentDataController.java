@@ -9,6 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -25,6 +26,15 @@ public class EnvironmentDataController {
     @PostMapping("/environmentdata")
     EnvironmentData newEnvironmentData(@RequestBody EnvironmentData newEnvironmentData) {
         return repository.save(newEnvironmentData);
+    }
+
+    @PostMapping("/environmentdata/batch")
+    List<EnvironmentData> newEnvironmentDataBatch(@RequestBody EnvironmentData[] newEnvironmentDataBatch) {
+        List<EnvironmentData> saved = new ArrayList<>();
+        for (EnvironmentData newEnvironmentData : newEnvironmentDataBatch) {
+            saved.add(repository.save(newEnvironmentData));
+        }
+        return saved;
     }
 
     @GetMapping("/environmentdata")

@@ -14,14 +14,23 @@ public class SleepData {
     @Column(name = "sleepDataID")
     private Integer sleepDataID;
 
-    @Column(name = "sdDateTime")
-    private LocalDateTime sdDateTime;
+    @Column(name = "sdDateTimeFrom")
+    private LocalDateTime sdDateTimeFrom;
 
-    @Column(name = "sdDate")
-    private LocalDate sdDate;
+    @Column(name = "sdDateFrom")
+    private LocalDate sdDateFrom;
 
-    @Column(name = "sdTime")
-    private LocalTime sdTime;
+    @Column(name = "sdTimeFrom")
+    private LocalTime sdTimeFrom;
+
+    @Column(name = "sdDateTimeTo")
+    private LocalDateTime sdDateTimeTo;
+
+    @Column(name = "sdDateTo")
+    private LocalDate sdDateTo;
+
+    @Column(name = "sdTimeTo")
+    private LocalTime sdTimeTo;
 
     @Column(name = "seconds")
     private Integer seconds;
@@ -30,16 +39,28 @@ public class SleepData {
     @Column(name = "level")
     private LEVELS level;
 
-    public LocalDateTime getSdDateTime() {
-        return sdDateTime;
+    public LocalDateTime getSdDateTimeFrom() {
+        return sdDateTimeFrom;
     }
 
-    public LocalDate getSdDate() {
-        return sdDate;
+    public LocalDate getSdDateFrom() {
+        return sdDateFrom;
     }
 
-    public LocalTime getSdTime() {
-        return sdTime;
+    public LocalTime getSdTimeFrom() {
+        return sdTimeFrom;
+    }
+
+    public LocalDateTime getSdDateTimeTo() {
+        return sdDateTimeTo;
+    }
+
+    public LocalDate getSdDateTo() {
+        return sdDateTo;
+    }
+
+    public LocalTime getSdTimeTo() {
+        return sdTimeTo;
     }
 
     public Integer getSeconds() {
