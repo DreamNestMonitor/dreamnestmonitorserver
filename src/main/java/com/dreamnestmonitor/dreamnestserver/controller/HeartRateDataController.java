@@ -1,6 +1,5 @@
 package com.dreamnestmonitor.dreamnestserver.controller;
 
-import com.dreamnestmonitor.dreamnestserver.model.EnvironmentData;
 import com.dreamnestmonitor.dreamnestserver.model.HeartRateData;
 import com.dreamnestmonitor.dreamnestserver.repository.HeartRateDataRepository;
 import com.google.common.base.Optional;
@@ -13,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+// @CrossOrigin(origins = "http://localhost:5173")
 @CrossOrigin(origins = "https://faded-sun-production.up.railway.app")
 public class HeartRateDataController {
     private final HeartRateDataRepository repository;

@@ -39,6 +39,24 @@ public class SleepData {
     @Column(name = "level")
     private LEVELS level;
 
+    // default constructor for GET
+    public SleepData() {}
+
+    public SleepData(LocalDateTime sdDateTimeFrom, LocalDate sdDateFrom, LocalTime sdTimeFrom, LocalDateTime sdDateTimeTo, LocalDate sdDateTo, LocalTime sdTimeTo, Integer seconds, LEVELS level) {
+        this.sdDateTimeFrom = sdDateTimeFrom;
+        this.sdDateFrom = sdDateFrom;
+        this.sdTimeFrom = sdTimeFrom;
+        this.sdDateTimeTo = sdDateTimeTo;
+        this.sdDateTo = sdDateTo;
+        this.sdTimeTo = sdTimeTo;
+        this.seconds = seconds;
+        this.level = level;
+    }
+
+    public Integer getSleepDataID() {
+        return sleepDataID;
+    }
+
     public LocalDateTime getSdDateTimeFrom() {
         return sdDateTimeFrom;
     }

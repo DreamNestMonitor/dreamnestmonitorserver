@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface SleepDataRepository extends JpaRepository<SleepData, Integer> {
+
     @Query(
             value = "SELECT * FROM SleepData WHERE sdDateTimeFrom BETWEEN ?1 AND ?2",
             nativeQuery = true)
