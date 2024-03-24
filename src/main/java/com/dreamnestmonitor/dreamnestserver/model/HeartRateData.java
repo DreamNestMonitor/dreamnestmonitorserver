@@ -8,10 +8,6 @@ import java.time.LocalDateTime;
 public class HeartRateData {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "rateID")
-    private Integer rateID;
-
     @Column(name = "rateDateTime")
     private LocalDateTime rateDateTime;
 
@@ -23,10 +19,6 @@ public class HeartRateData {
     public HeartRateData(LocalDateTime rateDateTime, Integer rate) {
         this.rateDateTime = rateDateTime;
         this.rate = rate;
-    }
-
-    public Integer getRateID() {
-        return rateID;
     }
 
     public LocalDateTime getRateDateTime() {

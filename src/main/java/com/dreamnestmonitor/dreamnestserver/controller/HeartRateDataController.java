@@ -1,6 +1,5 @@
 package com.dreamnestmonitor.dreamnestserver.controller;
 
-import com.dreamnestmonitor.dreamnestserver.model.EnvironmentData;
 import com.dreamnestmonitor.dreamnestserver.model.HeartRateData;
 import com.dreamnestmonitor.dreamnestserver.pojo.CurrentHeartRateDatePOJO;
 import com.dreamnestmonitor.dreamnestserver.pojo.HeartRateFitBitPOJO;
