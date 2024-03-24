@@ -29,19 +29,23 @@ public class EnvironmentData {
     @Column(name = "brightness")
     private Float brightness;
 
-    @Column(name = "noise")
-    private Float noise;
+    @Column(name = "loud")
+    private Float loud;
+
+    @Column(name = "quiet")
+    private Float quiet;
 
     protected EnvironmentData() {}
 
     public EnvironmentData(LocalDateTime envDateTime, LocalDate envDate, LocalTime envTime, Float temp,
-                           Float brightness, Float noise) {
+                           Float brightness, Float loud, Float quiet) {
         this.envDateTime = envDateTime;
         this.envDate = envDate;
         this.envTime = envTime;
         this.temp = temp;
         this.brightness = brightness;
-        this.noise = noise;
+        this.loud = loud;
+        this.quiet = quiet;
     }
 
     public Integer getEnvironmentDataID() {
@@ -68,7 +72,11 @@ public class EnvironmentData {
         return brightness;
     }
 
-    public Float getNoise() {
-        return noise;
+    public Float getLoud() {
+        return loud;
+    }
+
+    public Float getQuiet() {
+        return quiet;
     }
 }
